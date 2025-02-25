@@ -20,12 +20,12 @@ name: 1Password
 tags:
   - Passwords
   - Password Manager
-type: Index
+type: Contract
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 created: '2025-02-08'
 modified: '2025-02-24'
-position: Consumer
+position: Consuming
 description: >-
   You can use the 1Password Partnership API to manage the provisioning and
   deprovisioning of third-party partner billing accounts for your customers. The

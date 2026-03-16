@@ -1,38 +1,65 @@
 aid: 1password
 url: >-
   https://raw.githubusercontent.com/api-evangelist/1password/refs/heads/main/apis.yml
+name: 1Password
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Passwords
+  - Password Manager
+  - Security
+description: >-
+  1Password is a password manager that helps individuals and businesses securely
+  store and manage passwords, credentials, and sensitive information. The
+  1Password Partnership API enables partners to manage provisioning and
+  deprovisioning of third-party partner billing accounts for customers,
+  supporting individual and family account types.
+created: '2025-02-08'
+modified: '2026-03-16'
+specificationVersion: '0.19'
 apis:
-  - aid: 1password:1password
-    name: 1Password
+  - aid: 1password:1password-partnership-api
+    name: 1Password Partnership API
     tags:
-      - API
-    humanURL: ' https://developer.1password.com/docs/partnership-api/reference/'
+      - Passwords
+      - Billing
+      - Partners
+    humanURL: https://developer.1password.com/docs/partnership-api/reference/
+    baseURL: https://billing.b5test.eu/api/v1
     properties:
-      - url: ' https://developer.1password.com/docs/partnership-api/reference/'
+      - url: https://developer.1password.com/docs/partnership-api/reference/
         type: Documentation
     description: >-
       You can use the 1Password Partnership API to manage the provisioning and
       deprovisioning of third-party partner billing accounts for your customers.
       The API supports partner billing accounts for 1Password individual and
-      family accounts. The Partnership API doesnt support 1Password team or
-      business accounts. 
-name: 1Password
-tags:
-  - Passwords
-  - Password Manager
-type: Contract
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-access: 3rd-Party
-created: '2025-02-08'
-modified: '2025-02-24'
-position: Consuming
-description: >-
-  You can use the 1Password Partnership API to manage the provisioning and
-  deprovisioning of third-party partner billing accounts for your customers. The
-  API supports partner billing accounts for 1Password individual and family
-  accounts. The Partnership API doesnt support 1Password team or business
-  accounts. 
+      family accounts. The Partnership API does not support 1Password team or
+      business accounts.
+common:
+  - type: Website
+    url: https://1password.com/
+  - type: Portal
+    url: https://developer.1password.com/
+  - type: Documentation
+    url: https://developer.1password.com/docs/
+  - type: Getting Started
+    url: https://developer.1password.com/docs/get-started/
+  - type: Authentication
+    url: https://developer.1password.com/docs/connect/connect-api-reference/#authentication
+  - type: SDKs
+    url: https://developer.1password.com/docs/sdks/
+  - type: Blog
+    url: https://blog.1password.com/
+  - type: Support
+    url: https://support.1password.com/
+  - type: Privacy Policy
+    url: https://1password.com/legal/privacy/
+  - type: Terms of Service
+    url: https://1password.com/legal/terms-of-service/
+  - type: Sign Up
+    url: https://start.1password.com/sign-up/
+  - type: Login
+    url: https://my.1password.com/
 maintainers:
   - FN: Kin Lane
-    email: info@apievangelist.com
-specificationVersion: '0.19'
+    email: kin@apievangelist.com

@@ -15,9 +15,51 @@ description: >-
   deprovisioning of third-party partner billing accounts for customers,
   supporting individual and family account types.
 created: '2025-02-08'
-modified: '2026-03-16'
+modified: '2026-03-24'
 specificationVersion: '0.19'
 apis:
+  - aid: 1password:1password-connect-api
+    name: 1Password Connect Server API
+    tags:
+      - Passwords
+      - Secrets
+      - Vaults
+      - Items
+    humanURL: https://developer.1password.com/docs/connect/api-reference/
+    baseURL: http://localhost:8080
+    properties:
+      - url: https://developer.1password.com/docs/connect/api-reference/
+        type: Documentation
+      - url: openapi/1password-connect-openapi.yml
+        type: OpenAPI
+    description: >-
+      The 1Password Connect Server API provides secure access to 1Password
+      items and vaults in your company's apps and cloud infrastructure through
+      a private REST API. Connect Servers bridge the gap between 1Password and
+      your infrastructure by enabling programmatic access to secrets stored in
+      shared vaults. You can create, read, update, and delete items, manage
+      vaults, and retrieve files attached to items.
+  - aid: 1password:1password-events-api
+    name: 1Password Events API
+    tags:
+      - Events
+      - Security
+      - Audit
+      - Monitoring
+    humanURL: https://developer.1password.com/docs/events-api/reference/
+    baseURL: https://events.1password.com
+    properties:
+      - url: https://developer.1password.com/docs/events-api/reference/
+        type: Documentation
+      - url: openapi/1password-events-openapi.yml
+        type: OpenAPI
+    description: >-
+      The 1Password Events API provides programmatic access to event data
+      generated within a 1Password account. It enables security teams and
+      administrators to retrieve sign-in attempts, item usage records, and
+      audit events for monitoring, compliance, and security analysis. The API
+      uses cursor-based pagination with POST requests to efficiently stream
+      large volumes of event data.
   - aid: 1password:1password-partnership-api
     name: 1Password Partnership API
     tags:
@@ -29,6 +71,8 @@ apis:
     properties:
       - url: https://developer.1password.com/docs/partnership-api/reference/
         type: Documentation
+      - url: openapi/1password-partnership-openapi.yml
+        type: OpenAPI
     description: >-
       You can use the 1Password Partnership API to manage the provisioning and
       deprovisioning of third-party partner billing accounts for your customers.
@@ -60,6 +104,12 @@ common:
     url: https://start.1password.com/sign-up/
   - type: Login
     url: https://my.1password.com/
+  - type: JSON-LD
+    url: json-ld/1password-context.jsonld
+  - type: JSONSchema
+    url: json-schema/1password-item-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-event-schema.json
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

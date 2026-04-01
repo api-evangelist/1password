@@ -15,7 +15,7 @@ description: >-
   deprovisioning of third-party partner billing accounts for customers,
   supporting individual and family account types.
 created: '2025-02-08'
-modified: '2026-03-24'
+modified: '2026-04-01'
 specificationVersion: '0.19'
 apis:
   - aid: 1password:1password-connect-api
@@ -104,6 +104,10 @@ common:
     url: https://start.1password.com/sign-up/
   - type: Login
     url: https://my.1password.com/
+  - type: Change Log
+    url: https://developer.1password.com/docs/events-api/changelog/
+  - type: GitHubOrganization
+    url: https://github.com/1Password
   - type: JSON-LD
     url: json-ld/1password-context.jsonld
   - type: JSONSchema

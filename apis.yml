@@ -5,8 +5,8 @@ name: 1Password
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Passwords
   - Password Manager
+  - Passwords
   - Security
 description: >-
   1Password is a password manager that helps individuals and businesses securely
@@ -21,10 +21,10 @@ apis:
   - aid: 1password:1password-connect-api
     name: 1Password Connect Server API
     tags:
+      - Items
       - Passwords
       - Secrets
       - Vaults
-      - Items
     humanURL: https://developer.1password.com/docs/connect/api-reference/
     baseURL: http://localhost:8080
     properties:
@@ -42,10 +42,10 @@ apis:
   - aid: 1password:1password-events-api
     name: 1Password Events API
     tags:
-      - Events
-      - Security
       - Audit
+      - Events
       - Monitoring
+      - Security
     humanURL: https://developer.1password.com/docs/events-api/reference/
     baseURL: https://events.1password.com
     properties:
@@ -63,9 +63,9 @@ apis:
   - aid: 1password:1password-partnership-api
     name: 1Password Partnership API
     tags:
-      - Passwords
       - Billing
       - Partners
+      - Passwords
     humanURL: https://developer.1password.com/docs/partnership-api/reference/
     baseURL: https://billing.b5test.eu/api/v1
     properties:

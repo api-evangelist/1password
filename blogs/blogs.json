@@ -1,0 +1,13 @@
+{
+  "repo": "1password",
+  "feeds": [
+    {
+      "source": "https://blog.1password.com/",
+      "feed_url": "https://1password.com/blog/index.xml",
+      "saved": 10,
+      "title": "Blog on 1Password Blog"
+    }
+  ],
+  "post_count": 10,
+  "fetched": "2026-05-03T23:20:51Z"
+}

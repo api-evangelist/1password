@@ -3,11 +3,11 @@
   "feeds": [
     {
       "source": "https://blog.1password.com/",
-      "feed_url": "https://1password.com/blog/index.xml",
-      "saved": 10,
-      "title": "Blog on 1Password Blog"
+      "feed_url": "https://blog.1password.com/index.xml",
+      "title": "Blog on 1Password Blog",
+      "saved": 5
     }
   ],
-  "post_count": 10,
-  "fetched": "2026-05-03T23:20:51Z"
+  "post_count": 15,
+  "fetched": "2026-05-09T20:17:51Z"
 }

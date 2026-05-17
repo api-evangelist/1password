@@ -40,7 +40,7 @@ apis:
       - url: json-schema/1password-connect-full-item-schema.json
         type: JSONSchema
       - url: json-ld/1password-connect-context.jsonld
-        type: JSON-LD
+        type: JSONLD
     description: >-
       The 1Password Connect Server API provides secure access to 1Password
       items and vaults in your company's apps and cloud infrastructure through
@@ -67,7 +67,7 @@ apis:
       - url: json-schema/1password-events-item-usage-schema.json
         type: JSONSchema
       - url: json-ld/1password-events-context.jsonld
-        type: JSON-LD
+        type: JSONLD
     description: >-
       The 1Password Events API provides programmatic access to event data
       generated within a 1Password account. It enables security teams and
@@ -89,7 +89,7 @@ apis:
       - url: openapi/1password-partnership-openapi.yml
         type: OpenAPI
       - url: json-ld/1password-partnership-context.jsonld
-        type: JSON-LD
+        type: JSONLD
     description: >-
       You can use the 1Password Partnership API to manage the provisioning and
       deprovisioning of third-party partner billing accounts for your customers.

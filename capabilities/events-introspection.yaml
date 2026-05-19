@@ -1,0 +1,70 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: 1Password Events API — Introspection
+  description: '1Password Events API — Introspection. 1 operations. Lead operation: 1Password Introspect Authentication Token.
+    Self-contained Naftiko capability covering one 1password business surface.'
+  tags:
+  - 1password
+  - Introspection
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    1PASSWORD_API_KEY: 1PASSWORD_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: events-introspection
+    baseUri: https://events.1password.com
+    description: 1Password Events API — Introspection business capability. Self-contained, no shared references.
+    resources:
+    - name: api-v1-introspect
+      path: /api/v1/introspect
+      operations:
+      - name: introspecttoken
+        method: GET
+        description: 1Password Introspect Authentication Token
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.1PASSWORD_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: events-introspection-rest
+    port: 8080
+    description: REST adapter for 1Password Events API — Introspection. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/api/v1/introspect
+      name: api-v1-introspect
+      description: REST surface for api-v1-introspect.
+      operations:
+      - method: GET
+        name: introspecttoken
+        description: 1Password Introspect Authentication Token
+        call: events-introspection.introspecttoken
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: events-introspection-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for 1Password Events API — Introspection. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: 1password-introspect-authentication-token
+      description: 1Password Introspect Authentication Token
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: events-introspection.introspecttoken
+      outputParameters:
+      - type: object
+        mapping: $.

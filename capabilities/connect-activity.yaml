@@ -1,0 +1,85 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: 1Password Connect Server API — Activity
+  description: '1Password Connect Server API — Activity. 1 operations. Lead operation: 1Password List API Activity. Self-contained
+    Naftiko capability covering one 1password business surface.'
+  tags:
+  - 1password
+  - Activity
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    1PASSWORD_API_KEY: 1PASSWORD_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: connect-activity
+    baseUri: http://localhost:8080
+    description: 1Password Connect Server API — Activity business capability. Self-contained, no shared references.
+    resources:
+    - name: v1-activity
+      path: /v1/activity
+      operations:
+      - name: listactivity
+        method: GET
+        description: 1Password List API Activity
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: limit
+          in: query
+          type: integer
+          description: Maximum number of activity records to return.
+        - name: offset
+          in: query
+          type: integer
+          description: Number of activity records to skip before returning results.
+    authentication:
+      type: bearer
+      token: '{{env.1PASSWORD_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: connect-activity-rest
+    port: 8080
+    description: REST adapter for 1Password Connect Server API — Activity. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/v1/activity
+      name: v1-activity
+      description: REST surface for v1-activity.
+      operations:
+      - method: GET
+        name: listactivity
+        description: 1Password List API Activity
+        call: connect-activity.listactivity
+        with:
+          limit: rest.limit
+          offset: rest.offset
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: connect-activity-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for 1Password Connect Server API — Activity. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: 1password-list-api-activity
+      description: 1Password List API Activity
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: connect-activity.listactivity
+      with:
+        limit: tools.limit
+        offset: tools.offset
+      outputParameters:
+      - type: object
+        mapping: $.

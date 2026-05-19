@@ -1,0 +1,80 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: 1Password Events API — Audit Events
+  description: '1Password Events API — Audit Events. 1 operations. Lead operation: 1Password List Audit Events. Self-contained
+    Naftiko capability covering one 1password business surface.'
+  tags:
+  - 1password
+  - Audit Events
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    1PASSWORD_API_KEY: 1PASSWORD_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: events-audit-events
+    baseUri: https://events.1password.com
+    description: 1Password Events API — Audit Events business capability. Self-contained, no shared references.
+    resources:
+    - name: api-v2-auditevents
+      path: /api/v2/auditevents
+      operations:
+      - name: listauditeventsv2
+        method: POST
+        description: 1Password List Audit Events
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: bearer
+      token: '{{env.1PASSWORD_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: events-audit-events-rest
+    port: 8080
+    description: REST adapter for 1Password Events API — Audit Events. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/api/v2/auditevents
+      name: api-v2-auditevents
+      description: REST surface for api-v2-auditevents.
+      operations:
+      - method: POST
+        name: listauditeventsv2
+        description: 1Password List Audit Events
+        call: events-audit-events.listauditeventsv2
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: events-audit-events-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for 1Password Events API — Audit Events. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: 1password-list-audit-events
+      description: 1Password List Audit Events
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: events-audit-events.listauditeventsv2
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

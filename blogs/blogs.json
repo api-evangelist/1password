@@ -2,12 +2,17 @@
   "repo": "1password",
   "feeds": [
     {
-      "source": "https://blog.1password.com/",
+      "source": "https://blog.1password.com/index.xml",
       "feed_url": "https://blog.1password.com/index.xml",
-      "title": "Blog on 1Password Blog",
-      "saved": 39
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://developer.1password.com/docs/cli/",
+      "error": "HTTPError"
     }
   ],
-  "post_count": 54,
-  "fetched": "2026-05-17T20:20:35Z"
+  "post_count": 62,
+  "fetched": "2026-06-01T23:35:02Z"
 }

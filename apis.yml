@@ -106,6 +106,33 @@ apis:
     billing accounts for your customers. The API supports partner billing accounts for 1Password individual and family accounts.
     The Partnership API does not support 1Password team or business accounts.
 common:
+- type: ArazzoWorkflows
+  url: arazzo/
+  workflows:
+  - url: arazzo/1password-decommission-item-workflow.yml
+    name: 1Password Decommission an Item
+    summary: Confirm an item exists, then permanently delete it from its vault.
+  - url: arazzo/1password-download-item-file-workflow.yml
+    name: 1Password Download an Item File
+    summary: Read an item, list its attached files, select one by name, and download its content.
+  - url: arazzo/1password-provision-item-workflow.yml
+    name: 1Password Provision an Item
+    summary: Create a new item in a vault and read it back to confirm it was stored.
+  - url: arazzo/1password-provision-partner-billing-workflow.yml
+    name: 1Password Provision Partner Billing
+    summary: Create a customer partner billing account, read it back, then schedule its end date.
+  - url: arazzo/1password-read-item-secret-workflow.yml
+    name: 1Password Read an Item Secret
+    summary: Resolve a vault, locate an item by title, and read its full field values.
+  - url: arazzo/1password-rotate-item-password-workflow.yml
+    name: 1Password Rotate an Item Password
+    summary: Read an item, then apply a JSON Patch to replace its password field value.
+  - url: arazzo/1password-stream-audit-events-workflow.yml
+    name: 1Password Stream Audit Events
+    summary: Validate the Events token, open an audit event feed from a start time, then page with the cursor.
+  - url: arazzo/1password-stream-item-usages-workflow.yml
+    name: 1Password Stream Item Usages
+    summary: Open an item usage feed from a start time, then continue paging with the cursor while more remain.
 - type: LinkedIn
   url: https://www.linkedin.com/company/1password
 - type: Website

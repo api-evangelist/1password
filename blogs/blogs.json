@@ -2,10 +2,10 @@
   "repo": "1password",
   "feeds": [
     {
-      "source": "https://blog.1password.com/index.xml",
-      "feed_url": "https://blog.1password.com/index.xml",
+      "source": "https://1password.com/blog/index.xml",
+      "feed_url": "https://1password.com/blog/index.xml",
       "title": "",
-      "saved": 0,
+      "saved": 2,
       "method": "feed"
     },
     {
@@ -13,6 +13,6 @@
       "error": "HTTPError"
     }
   ],
-  "post_count": 62,
-  "fetched": "2026-06-01T23:35:02Z"
+  "post_count": 66,
+  "fetched": "2026-06-14T20:42:17Z"
 }

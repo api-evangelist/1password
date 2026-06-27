@@ -91,33 +91,30 @@ apis:
 common:
   - type: PostmanWorkspace
     url: https://www.postman.com/kinlaneapi/1password/overview
-  - type: ArazzoWorkflows
-    url: arazzo/
-    workflows:
-      - url: arazzo/1password-decommission-item-workflow.yml
-        name: 1Password Decommission an Item
-        summary: Confirm an item exists, then permanently delete it from its vault.
-      - url: arazzo/1password-download-item-file-workflow.yml
-        name: 1Password Download an Item File
-        summary: Read an item, list its attached files, select one by name, and download its content.
-      - url: arazzo/1password-provision-item-workflow.yml
-        name: 1Password Provision an Item
-        summary: Create a new item in a vault and read it back to confirm it was stored.
-      - url: arazzo/1password-provision-partner-billing-workflow.yml
-        name: 1Password Provision Partner Billing
-        summary: Create a customer partner billing account, read it back, then schedule its end date.
-      - url: arazzo/1password-read-item-secret-workflow.yml
-        name: 1Password Read an Item Secret
-        summary: Resolve a vault, locate an item by title, and read its full field values.
-      - url: arazzo/1password-rotate-item-password-workflow.yml
-        name: 1Password Rotate an Item Password
-        summary: Read an item, then apply a JSON Patch to replace its password field value.
-      - url: arazzo/1password-stream-audit-events-workflow.yml
-        name: 1Password Stream Audit Events
-        summary: Validate the Events token, open an audit event feed from a start time, then page with the cursor.
-      - url: arazzo/1password-stream-item-usages-workflow.yml
-        name: 1Password Stream Item Usages
-        summary: Open an item usage feed from a start time, then continue paging with the cursor while more remain.
+  - type: Arazzo
+    url: arazzo/1password-decommission-item-workflow.yml
+    name: 1Password Decommission an Item
+  - type: Arazzo
+    url: arazzo/1password-download-item-file-workflow.yml
+    name: 1Password Download an Item File
+  - type: Arazzo
+    url: arazzo/1password-provision-item-workflow.yml
+    name: 1Password Provision an Item
+  - type: Arazzo
+    url: arazzo/1password-provision-partner-billing-workflow.yml
+    name: 1Password Provision Partner Billing
+  - type: Arazzo
+    url: arazzo/1password-read-item-secret-workflow.yml
+    name: 1Password Read an Item Secret
+  - type: Arazzo
+    url: arazzo/1password-rotate-item-password-workflow.yml
+    name: 1Password Rotate an Item Password
+  - type: Arazzo
+    url: arazzo/1password-stream-audit-events-workflow.yml
+    name: 1Password Stream Audit Events
+  - type: Arazzo
+    url: arazzo/1password-stream-item-usages-workflow.yml
+    name: 1Password Stream Item Usages
   - type: LinkedIn
     url: https://www.linkedin.com/company/1password
   - type: Website
@@ -130,25 +127,25 @@ common:
     url: https://developer.1password.com/docs/get-started/
   - type: Authentication
     url: https://developer.1password.com/docs/connect/connect-api-reference/#authentication
-  - type: SDK
+  - type: SDKs
     url: https://developer.1password.com/docs/sdks/
     title: Official SDKs
-  - type: SDK
+  - type: SDKs
     url: https://pypi.org/project/onepassword-sdk/
     title: Python SDK
-  - type: SDK
+  - type: SDKs
     url: https://www.npmjs.com/package/@1password/sdk
     title: JavaScript SDK
-  - type: SDK
+  - type: SDKs
     url: https://pkg.go.dev/github.com/1Password/onepassword-sdk-go
     title: Go SDK
-  - type: SDK
+  - type: SDKs
     url: https://pypi.org/project/onepassword-connect-sdk/
     title: Connect Python SDK
-  - type: SDK
+  - type: SDKs
     url: https://www.npmjs.com/package/@1password/connect
     title: Connect Node.js SDK
-  - type: SDK
+  - type: SDKs
     url: https://pkg.go.dev/github.com/1Password/connect-sdk-go
     title: Connect Go SDK
   - type: CLI
@@ -162,7 +159,7 @@ common:
     url: https://1password.com/legal/privacy/
   - type: TermsOfService
     url: https://1password.com/legal/terms-of-service/
-  - type: SignUp
+  - type: Signup
     url: https://start.1password.com/sign-up/
   - type: ChangeLog
     url: https://developer.1password.com/docs/events-api/changelog/

@@ -89,6 +89,14 @@ apis:
       billing accounts for your customers. The API supports partner billing accounts for 1Password individual and family
       accounts. The Partnership API does not support 1Password team or business accounts.
 common:
+  - type: TrustCenter
+    url: security/1password-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/1password-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/1password-domain-security.yml
+  - type: Authentication
+    url: authentication/1password-authentication.yml
   - type: PostmanWorkspace
     url: https://www.postman.com/kinlaneapi/1password/overview
   - type: Arazzo

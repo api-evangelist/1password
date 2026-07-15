@@ -89,6 +89,8 @@ apis:
       billing accounts for your customers. The API supports partner billing accounts for 1Password individual and family
       accounts. The Partnership API does not support 1Password team or business accounts.
 common:
+  - type: AgenticAccess
+    url: agentic-access/1password-agentic-access.yml
   - type: TrustCenter
     url: security/1password-trust-center.yml
   - type: VulnerabilityDisclosure

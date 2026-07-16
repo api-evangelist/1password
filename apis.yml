@@ -14,7 +14,7 @@ description: >-
   management, an Events API for security monitoring and audit logging, and a Partnership API for managing partner
   billing accounts.
 created: '2025-02-08'
-modified: '2026-05-19'
+modified: '2026-06-20'
 specificationVersion: '0.19'
 apis:
   - aid: 1password:1password-connect-api
@@ -31,6 +31,8 @@ apis:
         type: Documentation
       - url: openapi/1password-connect-openapi.yml
         type: OpenAPI
+      - url: overlays/1password-connect-overlay.yaml
+        type: Overlay
       - url: json-schema/1password-connect-vault-schema.json
         type: JSONSchema
       - url: json-schema/1password-connect-item-schema.json
@@ -58,6 +60,8 @@ apis:
         type: Documentation
       - url: openapi/1password-events-openapi.yml
         type: OpenAPI
+      - url: overlays/1password-events-overlay.yaml
+        type: Overlay
       - url: json-schema/1password-events-sign-in-attempt-schema.json
         type: JSONSchema
       - url: json-schema/1password-events-item-usage-schema.json
@@ -82,6 +86,8 @@ apis:
         type: Documentation
       - url: openapi/1password-partnership-openapi.yml
         type: OpenAPI
+      - url: overlays/1password-partnership-overlay.yaml
+        type: Overlay
       - url: json-ld/1password-partnership-context.jsonld
         type: JSONLD
     description: >-
@@ -89,6 +95,30 @@ apis:
       billing accounts for your customers. The API supports partner billing accounts for 1Password individual and family
       accounts. The Partnership API does not support 1Password team or business accounts.
 common:
+  - type: Packages
+    url: packages/1password-packages.yml
+  - type: WellKnown
+    url: well-known/1password-well-known.yml
+  - type: SecurityTxt
+    url: well-known/1password-security.txt
+  - type: MCPServer
+    url: mcp/1password-mcp.yml
+  - type: LLMsTxt
+    url: llms/1password-llms.txt
+  - type: Conformance
+    url: conformance/1password-conformance.yml
+  - type: ErrorCatalog
+    url: errors/1password-problem-types.yml
+  - type: Lifecycle
+    url: lifecycle/1password-lifecycle.yml
+  - type: Conventions
+    url: conventions/1password-conventions.yml
+  - type: ChangeLog
+    url: changelog/1password-changelog.yml
+  - type: CLI
+    url: cli/1password-cli.yml
+  - type: DataModel
+    url: data-model/1password-data-model.yml
   - type: AgenticAccess
     url: agentic-access/1password-agentic-access.yml
   - type: TrustCenter

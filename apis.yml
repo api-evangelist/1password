@@ -2,7 +2,20 @@ aid: 1password
 url: https://raw.githubusercontent.com/api-evangelist/1password/refs/heads/main/apis.yml
 name: 1Password
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Paid · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/1password.png
 tags:
   - Password Manager
   - Passwords
@@ -17,83 +30,368 @@ created: '2025-02-08'
 modified: '2026-06-20'
 specificationVersion: '0.19'
 apis:
-  - aid: 1password:1password-connect-api
-    name: 1Password Connect Server API
-    tags:
-      - Items
-      - Passwords
-      - Secrets
-      - Vaults
-    humanURL: https://developer.1password.com/docs/connect/api-reference/
-    baseURL: http://localhost:8080
-    properties:
-      - url: https://developer.1password.com/docs/connect/api-reference/
-        type: Documentation
-      - url: openapi/1password-connect-openapi.yml
-        type: OpenAPI
-      - url: overlays/1password-connect-overlay.yaml
-        type: Overlay
-      - url: json-schema/1password-connect-vault-schema.json
-        type: JSONSchema
-      - url: json-schema/1password-connect-item-schema.json
-        type: JSONSchema
-      - url: json-schema/1password-connect-full-item-schema.json
-        type: JSONSchema
-      - url: json-ld/1password-connect-context.jsonld
-        type: JSONLD
-    description: >-
-      The 1Password Connect Server API provides secure access to 1Password items and vaults in your company's apps and
-      cloud infrastructure through a private REST API. Connect Servers bridge the gap between 1Password and your
-      infrastructure by enabling programmatic access to secrets stored in shared vaults. You can create, read, update,
-      and delete items, manage vaults, and retrieve files attached to items.
-  - aid: 1password:1password-events-api
-    name: 1Password Events API
-    tags:
-      - Audit
-      - Events
-      - Monitoring
-      - Security
-    humanURL: https://developer.1password.com/docs/events-api/reference/
-    baseURL: https://events.1password.com
-    properties:
-      - url: https://developer.1password.com/docs/events-api/reference/
-        type: Documentation
-      - url: openapi/1password-events-openapi.yml
-        type: OpenAPI
-      - url: overlays/1password-events-overlay.yaml
-        type: Overlay
-      - url: json-schema/1password-events-sign-in-attempt-schema.json
-        type: JSONSchema
-      - url: json-schema/1password-events-item-usage-schema.json
-        type: JSONSchema
-      - url: json-ld/1password-events-context.jsonld
-        type: JSONLD
-    description: >-
-      The 1Password Events API provides programmatic access to event data generated within a 1Password account. It
-      enables security teams and administrators to retrieve sign-in attempts, item usage records, and audit events for
-      monitoring, compliance, and security analysis. The API uses cursor-based pagination with POST requests to
-      efficiently stream large volumes of event data.
-  - aid: 1password:1password-partnership-api
-    name: 1Password Partnership API
-    tags:
-      - Billing
-      - Partners
-      - Passwords
-    humanURL: https://developer.1password.com/docs/partnership-api/reference/
-    baseURL: https://billing.b5test.eu/api/v1
-    properties:
-      - url: https://developer.1password.com/docs/partnership-api/reference/
-        type: Documentation
-      - url: openapi/1password-partnership-openapi.yml
-        type: OpenAPI
-      - url: overlays/1password-partnership-overlay.yaml
-        type: Overlay
-      - url: json-ld/1password-partnership-context.jsonld
-        type: JSONLD
-    description: >-
-      You can use the 1Password Partnership API to manage the provisioning and deprovisioning of third-party partner
-      billing accounts for your customers. The API supports partner billing accounts for 1Password individual and family
-      accounts. The Partnership API does not support 1Password team or business accounts.
+- aid: 1password:1password-accounts-api
+  name: 1Password Accounts API
+  description: >-
+    Operations for managing partner billing accounts for customers, including creating, retrieving, updating,
+    and deleting billing accounts.
+  humanURL: https://developer.1password.com/docs/connect/api-reference/
+  baseURL: http://localhost:8080
+  tags:
+  - Accounts
+  properties:
+  - type: OpenAPI
+    url: openapi/1password-accounts-api-openapi.yml
+  - type: Documentation
+    url: https://developer.1password.com/docs/connect/api-reference/
+  - type: JSONSchema
+    url: json-schema/1password-connect-vault-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-connect-item-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-connect-full-item-schema.json
+  - type: JSONLD
+    url: json-ld/1password-connect-context.jsonld
+  - type: Documentation
+    url: https://developer.1password.com/docs/events-api/reference/
+  - type: JSONSchema
+    url: json-schema/1password-events-sign-in-attempt-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-events-item-usage-schema.json
+  - type: JSONLD
+    url: json-ld/1password-events-context.jsonld
+  - type: Documentation
+    url: https://developer.1password.com/docs/partnership-api/reference/
+  - type: JSONLD
+    url: json-ld/1password-partnership-context.jsonld
+- aid: 1password:1password-activity-api
+  name: 1Password Activity API
+  description: Operations for listing API requests made to the Connect server.
+  humanURL: https://developer.1password.com/docs/connect/api-reference/
+  baseURL: http://localhost:8080
+  tags:
+  - Activity
+  properties:
+  - type: OpenAPI
+    url: openapi/1password-activity-api-openapi.yml
+  - type: Documentation
+    url: https://developer.1password.com/docs/connect/api-reference/
+  - type: JSONSchema
+    url: json-schema/1password-connect-vault-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-connect-item-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-connect-full-item-schema.json
+  - type: JSONLD
+    url: json-ld/1password-connect-context.jsonld
+  - type: Documentation
+    url: https://developer.1password.com/docs/events-api/reference/
+  - type: JSONSchema
+    url: json-schema/1password-events-sign-in-attempt-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-events-item-usage-schema.json
+  - type: JSONLD
+    url: json-ld/1password-events-context.jsonld
+  - type: Documentation
+    url: https://developer.1password.com/docs/partnership-api/reference/
+  - type: JSONLD
+    url: json-ld/1password-partnership-context.jsonld
+- aid: 1password:1password-audit-events-api
+  name: 1Password Audit Events API
+  description: >-
+    Retrieve information about actions performed by team members within a 1Password account, including
+    when an action was performed and by whom, along with details about the type and object of the action.
+  humanURL: https://developer.1password.com/docs/connect/api-reference/
+  baseURL: http://localhost:8080
+  tags:
+  - Audit Events
+  properties:
+  - type: OpenAPI
+    url: openapi/1password-audit-events-api-openapi.yml
+  - type: Documentation
+    url: https://developer.1password.com/docs/connect/api-reference/
+  - type: JSONSchema
+    url: json-schema/1password-connect-vault-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-connect-item-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-connect-full-item-schema.json
+  - type: JSONLD
+    url: json-ld/1password-connect-context.jsonld
+  - type: Documentation
+    url: https://developer.1password.com/docs/events-api/reference/
+  - type: JSONSchema
+    url: json-schema/1password-events-sign-in-attempt-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-events-item-usage-schema.json
+  - type: JSONLD
+    url: json-ld/1password-events-context.jsonld
+  - type: Documentation
+    url: https://developer.1password.com/docs/partnership-api/reference/
+  - type: JSONLD
+    url: json-ld/1password-partnership-context.jsonld
+- aid: 1password:1password-files-api
+  name: 1Password Files API
+  description: Operations for listing and retrieving files attached to items.
+  humanURL: https://developer.1password.com/docs/connect/api-reference/
+  baseURL: http://localhost:8080
+  tags:
+  - Files
+  properties:
+  - type: OpenAPI
+    url: openapi/1password-files-api-openapi.yml
+  - type: Documentation
+    url: https://developer.1password.com/docs/connect/api-reference/
+  - type: JSONSchema
+    url: json-schema/1password-connect-vault-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-connect-item-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-connect-full-item-schema.json
+  - type: JSONLD
+    url: json-ld/1password-connect-context.jsonld
+  - type: Documentation
+    url: https://developer.1password.com/docs/events-api/reference/
+  - type: JSONSchema
+    url: json-schema/1password-events-sign-in-attempt-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-events-item-usage-schema.json
+  - type: JSONLD
+    url: json-ld/1password-events-context.jsonld
+  - type: Documentation
+    url: https://developer.1password.com/docs/partnership-api/reference/
+  - type: JSONLD
+    url: json-ld/1password-partnership-context.jsonld
+- aid: 1password:1password-health-api
+  name: 1Password Health API
+  description: Operations for checking the health and status of the Connect server.
+  humanURL: https://developer.1password.com/docs/connect/api-reference/
+  baseURL: http://localhost:8080
+  tags:
+  - Health
+  properties:
+  - type: OpenAPI
+    url: openapi/1password-health-api-openapi.yml
+  - type: Documentation
+    url: https://developer.1password.com/docs/connect/api-reference/
+  - type: JSONSchema
+    url: json-schema/1password-connect-vault-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-connect-item-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-connect-full-item-schema.json
+  - type: JSONLD
+    url: json-ld/1password-connect-context.jsonld
+  - type: Documentation
+    url: https://developer.1password.com/docs/events-api/reference/
+  - type: JSONSchema
+    url: json-schema/1password-events-sign-in-attempt-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-events-item-usage-schema.json
+  - type: JSONLD
+    url: json-ld/1password-events-context.jsonld
+  - type: Documentation
+    url: https://developer.1password.com/docs/partnership-api/reference/
+  - type: JSONLD
+    url: json-ld/1password-partnership-context.jsonld
+- aid: 1password:1password-introspection-api
+  name: 1Password Introspection API
+  description: >-
+    Retrieve information about the authentication token being used, including its features and permissions.
+  humanURL: https://developer.1password.com/docs/connect/api-reference/
+  baseURL: http://localhost:8080
+  tags:
+  - Introspection
+  properties:
+  - type: OpenAPI
+    url: openapi/1password-introspection-api-openapi.yml
+  - type: Documentation
+    url: https://developer.1password.com/docs/connect/api-reference/
+  - type: JSONSchema
+    url: json-schema/1password-connect-vault-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-connect-item-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-connect-full-item-schema.json
+  - type: JSONLD
+    url: json-ld/1password-connect-context.jsonld
+  - type: Documentation
+    url: https://developer.1password.com/docs/events-api/reference/
+  - type: JSONSchema
+    url: json-schema/1password-events-sign-in-attempt-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-events-item-usage-schema.json
+  - type: JSONLD
+    url: json-ld/1password-events-context.jsonld
+  - type: Documentation
+    url: https://developer.1password.com/docs/partnership-api/reference/
+  - type: JSONLD
+    url: json-ld/1password-partnership-context.jsonld
+- aid: 1password:1password-item-usages-api
+  name: 1Password Item Usages API
+  description: >-
+    Retrieve information about items in shared vaults that have been modified, accessed, or used, including
+    the user who accessed the item, when it was accessed, and the vault where the item is stored.
+  humanURL: https://developer.1password.com/docs/connect/api-reference/
+  baseURL: http://localhost:8080
+  tags:
+  - Item Usages
+  properties:
+  - type: OpenAPI
+    url: openapi/1password-item-usages-api-openapi.yml
+  - type: Documentation
+    url: https://developer.1password.com/docs/connect/api-reference/
+  - type: JSONSchema
+    url: json-schema/1password-connect-vault-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-connect-item-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-connect-full-item-schema.json
+  - type: JSONLD
+    url: json-ld/1password-connect-context.jsonld
+  - type: Documentation
+    url: https://developer.1password.com/docs/events-api/reference/
+  - type: JSONSchema
+    url: json-schema/1password-events-sign-in-attempt-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-events-item-usage-schema.json
+  - type: JSONLD
+    url: json-ld/1password-events-context.jsonld
+  - type: Documentation
+    url: https://developer.1password.com/docs/partnership-api/reference/
+  - type: JSONLD
+    url: json-ld/1password-partnership-context.jsonld
+- aid: 1password:1password-items-api
+  name: 1Password Items API
+  description: Operations for creating, reading, updating, and deleting items within vaults.
+  humanURL: https://developer.1password.com/docs/connect/api-reference/
+  baseURL: http://localhost:8080
+  tags:
+  - Items
+  properties:
+  - type: OpenAPI
+    url: openapi/1password-items-api-openapi.yml
+  - type: Documentation
+    url: https://developer.1password.com/docs/connect/api-reference/
+  - type: JSONSchema
+    url: json-schema/1password-connect-vault-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-connect-item-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-connect-full-item-schema.json
+  - type: JSONLD
+    url: json-ld/1password-connect-context.jsonld
+  - type: Documentation
+    url: https://developer.1password.com/docs/events-api/reference/
+  - type: JSONSchema
+    url: json-schema/1password-events-sign-in-attempt-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-events-item-usage-schema.json
+  - type: JSONLD
+    url: json-ld/1password-events-context.jsonld
+  - type: Documentation
+    url: https://developer.1password.com/docs/partnership-api/reference/
+  - type: JSONLD
+    url: json-ld/1password-partnership-context.jsonld
+- aid: 1password:1password-metrics-api
+  name: 1Password Metrics API
+  description: Operations for retrieving Prometheus-style metrics from the Connect server.
+  humanURL: https://developer.1password.com/docs/connect/api-reference/
+  baseURL: http://localhost:8080
+  tags:
+  - Metrics
+  properties:
+  - type: OpenAPI
+    url: openapi/1password-metrics-api-openapi.yml
+  - type: Documentation
+    url: https://developer.1password.com/docs/connect/api-reference/
+  - type: JSONSchema
+    url: json-schema/1password-connect-vault-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-connect-item-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-connect-full-item-schema.json
+  - type: JSONLD
+    url: json-ld/1password-connect-context.jsonld
+  - type: Documentation
+    url: https://developer.1password.com/docs/events-api/reference/
+  - type: JSONSchema
+    url: json-schema/1password-events-sign-in-attempt-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-events-item-usage-schema.json
+  - type: JSONLD
+    url: json-ld/1password-events-context.jsonld
+  - type: Documentation
+    url: https://developer.1password.com/docs/partnership-api/reference/
+  - type: JSONLD
+    url: json-ld/1password-partnership-context.jsonld
+- aid: 1password:1password-sign-in-attempts-api
+  name: 1Password Sign-In Attempts API
+  description: >-
+    Retrieve information about sign-in attempts to 1Password accounts, including the name and IP address
+    of the user who attempted to sign in, when the attempt was made, and for failed attempts the cause
+    of failure.
+  humanURL: https://developer.1password.com/docs/connect/api-reference/
+  baseURL: http://localhost:8080
+  tags:
+  - Sign-In Attempts
+  properties:
+  - type: OpenAPI
+    url: openapi/1password-sign-in-attempts-api-openapi.yml
+  - type: Documentation
+    url: https://developer.1password.com/docs/connect/api-reference/
+  - type: JSONSchema
+    url: json-schema/1password-connect-vault-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-connect-item-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-connect-full-item-schema.json
+  - type: JSONLD
+    url: json-ld/1password-connect-context.jsonld
+  - type: Documentation
+    url: https://developer.1password.com/docs/events-api/reference/
+  - type: JSONSchema
+    url: json-schema/1password-events-sign-in-attempt-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-events-item-usage-schema.json
+  - type: JSONLD
+    url: json-ld/1password-events-context.jsonld
+  - type: Documentation
+    url: https://developer.1password.com/docs/partnership-api/reference/
+  - type: JSONLD
+    url: json-ld/1password-partnership-context.jsonld
+- aid: 1password:1password-vaults-api
+  name: 1Password Vaults API
+  description: Operations for listing and retrieving vaults available to the Connect server.
+  humanURL: https://developer.1password.com/docs/connect/api-reference/
+  baseURL: http://localhost:8080
+  tags:
+  - Vaults
+  properties:
+  - type: OpenAPI
+    url: openapi/1password-vaults-api-openapi.yml
+  - type: Documentation
+    url: https://developer.1password.com/docs/connect/api-reference/
+  - type: JSONSchema
+    url: json-schema/1password-connect-vault-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-connect-item-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-connect-full-item-schema.json
+  - type: JSONLD
+    url: json-ld/1password-connect-context.jsonld
+  - type: Documentation
+    url: https://developer.1password.com/docs/events-api/reference/
+  - type: JSONSchema
+    url: json-schema/1password-events-sign-in-attempt-schema.json
+  - type: JSONSchema
+    url: json-schema/1password-events-item-usage-schema.json
+  - type: JSONLD
+    url: json-ld/1password-events-context.jsonld
+  - type: Documentation
+    url: https://developer.1password.com/docs/partnership-api/reference/
+  - type: JSONLD
+    url: json-ld/1password-partnership-context.jsonld
 common:
   - type: Packages
     url: packages/1password-packages.yml

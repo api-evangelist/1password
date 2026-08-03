@@ -1,0 +1,34 @@
+{
+  "provider": "1password",
+  "sources": [
+    "1password-accounts-api-openapi.yml",
+    "1password-activity-api-openapi.yml",
+    "1password-audit-events-api-openapi.yml",
+    "1password-files-api-openapi.yml",
+    "1password-health-api-openapi.yml",
+    "1password-introspection-api-openapi.yml",
+    "1password-item-usages-api-openapi.yml",
+    "1password-items-api-openapi.yml",
+    "1password-metrics-api-openapi.yml",
+    "1password-sign-in-attempts-api-openapi.yml",
+    "1password-vaults-api-openapi.yml"
+  ],
+  "outputs": [
+    "1password-accounts-api-openapi.yml",
+    "1password-activity-api-openapi.yml",
+    "1password-audit-events-api-openapi.yml",
+    "1password-files-api-openapi.yml",
+    "1password-health-api-openapi.yml",
+    "1password-introspection-api-openapi.yml",
+    "1password-item-usages-api-openapi.yml",
+    "1password-items-api-openapi.yml",
+    "1password-metrics-api-openapi.yml",
+    "1password-sign-in-attempts-api-openapi.yml",
+    "1password-vaults-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

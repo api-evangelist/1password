@@ -393,6 +393,8 @@ apis:
   - type: JSONLD
     url: json-ld/1password-partnership-context.jsonld
 common:
+  - type: Overlay
+    url: overlays/1password-connect-overlay.yaml
   - type: Packages
     url: packages/1password-packages.yml
   - type: WellKnown

@@ -28,7 +28,7 @@ description: >-
   billing accounts.
 created: '2025-02-08'
 modified: '2026-06-20'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: 1password:1password-accounts-api
   name: 1Password Accounts API

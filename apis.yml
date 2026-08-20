@@ -38,6 +38,8 @@ apis:
   humanURL: https://developer.1password.com/docs/connect/api-reference/
   baseURL: http://localhost:8080
   tags:
+  - Account
+  tags_raw:
   - Accounts
   properties:
   - type: OpenAPI
@@ -136,6 +138,8 @@ apis:
   humanURL: https://developer.1password.com/docs/connect/api-reference/
   baseURL: http://localhost:8080
   tags:
+  - File
+  tags_raw:
   - Files
   properties:
   - type: OpenAPI
@@ -267,6 +271,8 @@ apis:
   humanURL: https://developer.1password.com/docs/connect/api-reference/
   baseURL: http://localhost:8080
   tags:
+  - Item
+  tags_raw:
   - Items
   properties:
   - type: OpenAPI
@@ -366,6 +372,8 @@ apis:
   humanURL: https://developer.1password.com/docs/connect/api-reference/
   baseURL: http://localhost:8080
   tags:
+  - Vault
+  tags_raw:
   - Vaults
   properties:
   - type: OpenAPI

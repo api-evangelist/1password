@@ -1,34 +1,43 @@
 {
   "provider": "1password",
   "sources": [
-    "1password-accounts-api-openapi.yml",
-    "1password-activity-api-openapi.yml",
-    "1password-audit-events-api-openapi.yml",
-    "1password-files-api-openapi.yml",
-    "1password-health-api-openapi.yml",
-    "1password-introspection-api-openapi.yml",
-    "1password-item-usages-api-openapi.yml",
-    "1password-items-api-openapi.yml",
-    "1password-metrics-api-openapi.yml",
-    "1password-sign-in-attempts-api-openapi.yml",
-    "1password-vaults-api-openapi.yml"
+    "_original/1password-connect-openapi.yml",
+    "_original/1password-events-openapi.yml",
+    "_original/1password-partnership-openapi.yml"
   ],
   "outputs": [
-    "1password-accounts-api-openapi.yml",
     "1password-activity-api-openapi.yml",
-    "1password-audit-events-api-openapi.yml",
     "1password-files-api-openapi.yml",
     "1password-health-api-openapi.yml",
-    "1password-introspection-api-openapi.yml",
-    "1password-item-usages-api-openapi.yml",
     "1password-items-api-openapi.yml",
     "1password-metrics-api-openapi.yml",
+    "1password-vaults-api-openapi.yml",
+    "1password-audit-events-api-openapi.yml",
+    "1password-introspection-api-openapi.yml",
+    "1password-item-usages-api-openapi.yml",
     "1password-sign-in-attempts-api-openapi.yml",
-    "1password-vaults-api-openapi.yml"
+    "1password-accounts-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (3 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "1password-connect-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "1password-events-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "1password-partnership-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0"
+  ],
+  "skipped": [
+    "1password-accounts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "1password-activity-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "1password-audit-events-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "1password-files-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "1password-health-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "1password-introspection-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "1password-item-usages-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "1password-items-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "1password-metrics-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "1password-sign-in-attempts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "1password-vaults-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

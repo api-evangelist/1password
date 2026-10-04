@@ -420,6 +420,9 @@ apis:
   - type: JSONLD
     url: json-ld/1password-partnership-context.jsonld
 common:
+  - type: CapabilityMap
+    url: capabilities/1password-capability-edges.yml
+    name: 1Password Business Capability Map
   - type: Overlay
     url: overlays/1password-connect-overlay.yaml
   - type: Packages

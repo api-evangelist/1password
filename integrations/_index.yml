@@ -40,3 +40,16 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: 1password-google-workspace-own
+  label: Google Workspace (own)
+  partner: google-workspace
+  partner_name: Google Workspace (own)
+  category: Google Workspace app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://workspace.google.com/marketplace/app/1password_saas_manager/351269263993
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null

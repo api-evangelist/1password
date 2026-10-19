@@ -419,6 +419,104 @@ apis:
     url: https://developer.1password.com/docs/partnership-api/reference/
   - type: JSONLD
     url: json-ld/1password-partnership-context.jsonld
+- aid: 1password:1password-applications-api
+  name: 1Password Applications API
+  description: List, search and manage applications, and list the accounts (users) on an application.
+  humanURL: https://developer.1password.com/docs/connect/api-reference/
+  baseURL: http://localhost:8080
+  tags:
+  - Applications
+  properties:
+  - type: OpenAPI
+    url: openapi/1password-applications-api-openapi.yml
+- aid: 1password:1password-audit-log-api
+  name: 1Password Audit log API
+  description: 'Read your organization''s audit log: a continuous, filterable stream of events.'
+  humanURL: https://developer.1password.com/docs/connect/api-reference/
+  baseURL: http://localhost:8080
+  tags:
+  - Audit log
+  properties:
+  - type: OpenAPI
+    url: openapi/1password-audit-log-api-openapi.yml
+- aid: 1password:1password-authentication-api
+  name: 1Password Authentication API
+  description: >-
+    Obtain an OAuth 2.0 access token. Use the Client Credentials flow for machine-to-machine access, or
+    the Authorization Code flow to act on behalf of a user.
+  humanURL: https://developer.1password.com/docs/connect/api-reference/
+  baseURL: http://localhost:8080
+  tags:
+  - Authentication
+  properties:
+  - type: OpenAPI
+    url: openapi/1password-authentication-api-openapi.yml
+- aid: 1password:1password-contracts-api
+  name: 1Password Contracts API
+  description: List and manage contracts.
+  humanURL: https://developer.1password.com/docs/connect/api-reference/
+  baseURL: http://localhost:8080
+  tags:
+  - Contracts
+  properties:
+  - type: OpenAPI
+    url: openapi/1password-contracts-api-openapi.yml
+- aid: 1password:1password-devices-api
+  name: 1Password Devices API
+  description: List and manage devices. The endpoints live under `/api/assets`.
+  humanURL: https://developer.1password.com/docs/connect/api-reference/
+  baseURL: http://localhost:8080
+  tags:
+  - Devices
+  properties:
+  - type: OpenAPI
+    url: openapi/1password-devices-api-openapi.yml
+- aid: 1password:1password-people-api
+  name: 1Password People API
+  description: List, search and manage the people in your organization.
+  humanURL: https://developer.1password.com/docs/connect/api-reference/
+  baseURL: http://localhost:8080
+  tags:
+  - People
+  properties:
+  - type: OpenAPI
+    url: openapi/1password-people-api-openapi.yml
+- aid: 1password:1password-scim-api
+  name: 1Password SCIM API
+  description: >-
+    Provision and manage users via the SCIM 2.0 protocol (RFC 7644). These endpoints follow the SCIM standard
+    rather than the conventions used by the rest of the SaaS Manager API: they use `startIndex`/`count`
+    paging, return a SCIM `ListResponse` envelope, identify schemas with `urn:` URIs, and exchange `application/scim+json`.
+    The `ResourceTypes` endpoints support SCIM discovery (RFC 7643).
+  humanURL: https://developer.1password.com/docs/connect/api-reference/
+  baseURL: http://localhost:8080
+  tags:
+  - SCIM
+  properties:
+  - type: OpenAPI
+    url: openapi/1password-scim-api-openapi.yml
+- aid: 1password:1password-teams-api
+  name: 1Password Teams API
+  description: List and manage teams and the team hierarchy.
+  humanURL: https://developer.1password.com/docs/connect/api-reference/
+  baseURL: http://localhost:8080
+  tags:
+  - Teams
+  properties:
+  - type: OpenAPI
+    url: openapi/1password-teams-api-openapi.yml
+- aid: 1password:1password-workflows-api
+  name: 1Password Workflows API
+  description: >-
+    List workflows (with their triggers and steps), list their runs, and fire signals on steps that are
+    waiting for input.
+  humanURL: https://developer.1password.com/docs/connect/api-reference/
+  baseURL: http://localhost:8080
+  tags:
+  - Workflows
+  properties:
+  - type: OpenAPI
+    url: openapi/1password-workflows-api-openapi.yml
 common:
   - type: Plans
     url: plans/1password-plans-pricing.yml

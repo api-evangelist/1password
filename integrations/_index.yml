@@ -136,3 +136,16 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: 1password-digital-ocean-own
+  label: Digital Ocean (own)
+  partner: digital-ocean
+  partner_name: Digital Ocean (own)
+  category: Security
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://marketplace.digitalocean.com/apps/1password-scim-bridge
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null

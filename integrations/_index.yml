@@ -85,70 +85,6 @@
     detected: '2026-10-18'
   status: not-a-workflow
   arazzo: null
-- slug: 1password-crowdstrike-own
-  label: CrowdStrike (own)
-  partner: crowdstrike
-  partner_name: CrowdStrike (own)
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://marketplace.crowdstrike.com/listings/1password-business-data-connector/
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: 1password-microsoft-sentinel-own
-  label: Microsoft Sentinel (own)
-  partner: microsoft-sentinel
-  partner_name: Microsoft Sentinel (own)
-  category: Security - Others
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/1Password
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: 1password-google-workspace-own
-  label: Google Workspace (own)
-  partner: google-workspace
-  partner_name: Google Workspace (own)
-  category: Google Workspace app
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://workspace.google.com/marketplace/app/1password_saas_manager/351269263993
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: 1password-pulumi-pulumi-registry
-  label: Pulumi (pulumi-registry)
-  partner: pulumi
-  partner_name: Pulumi (pulumi-registry)
-  category: infrastructure-as-code provider registry listing
-  type: marketplace
-  marketplace: pulumi-registry
-  channel: partner-built
-  evidence: https://www.pulumi.com/registry/packages/onepassword/
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: 1password-digital-ocean-own
-  label: Digital Ocean (own)
-  partner: digital-ocean
-  partner_name: Digital Ocean (own)
-  category: Security
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://marketplace.digitalocean.com/apps/1password-scim-bridge
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: 1password-mozilla-firefox-add-ons-amo
   label: Mozilla Firefox Add-ons (AMO)
   partner_name: Mozilla Firefox Add-ons (AMO)
@@ -332,5 +268,82 @@
       lapsed: false
     detected_by: sweep-tx-ramp-certified-cloud.py
     detected: '2026-10-22'
+  status: not-a-workflow
+  arazzo: null
+- slug: 1password-crowdstrike-own
+  label: CrowdStrike (own)
+  partner: crowdstrike
+  partner_name: CrowdStrike (own)
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://marketplace.crowdstrike.com/listings/1password-business-data-connector/
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: 1password-microsoft-sentinel-own
+  label: Microsoft Sentinel (own)
+  partner: microsoft-sentinel
+  partner_name: Microsoft Sentinel (own)
+  category: Security - Others
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/1Password
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: 1password-google-workspace-own
+  label: Google Workspace (own)
+  partner: google-workspace
+  partner_name: Google Workspace (own)
+  category: Google Workspace app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://workspace.google.com/marketplace/app/1password_saas_manager/351269263993
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: 1password-pulumi-pulumi-registry
+  label: Pulumi (pulumi-registry)
+  partner: pulumi
+  partner_name: Pulumi (pulumi-registry)
+  category: infrastructure-as-code provider registry listing
+  type: marketplace
+  marketplace: pulumi-registry
+  channel: partner-built
+  evidence: https://www.pulumi.com/registry/packages/onepassword/
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: 1password-digital-ocean-own
+  label: Digital Ocean (own)
+  partner: digital-ocean
+  partner_name: Digital Ocean (own)
+  category: Security
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://marketplace.digitalocean.com/apps/1password-scim-bridge
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: 1password-ansible-ansible-galaxy
+  label: Ansible (ansible-galaxy)
+  partner: ansible
+  partner_name: Ansible (ansible-galaxy)
+  category: configuration-management content listing (Ansible collection)
+  type: marketplace
+  marketplace: ansible-galaxy
+  channel: partner-built
+  evidence: https://galaxy.ansible.com/ui/repo/published/onepassword/connect/
+  source: edge
+  relationship: platform-app
   status: not-a-workflow
   arazzo: null

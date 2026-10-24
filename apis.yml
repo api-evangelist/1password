@@ -425,6 +425,8 @@ apis:
   humanURL: https://developer.1password.com/docs/connect/api-reference/
   baseURL: http://localhost:8080
   tags:
+  - Application
+  tags_raw:
   - Applications
   properties:
   - type: OpenAPI
@@ -435,6 +437,8 @@ apis:
   humanURL: https://developer.1password.com/docs/connect/api-reference/
   baseURL: http://localhost:8080
   tags:
+  - Audit Logs
+  tags_raw:
   - Audit log
   properties:
   - type: OpenAPI
@@ -501,6 +505,8 @@ apis:
   humanURL: https://developer.1password.com/docs/connect/api-reference/
   baseURL: http://localhost:8080
   tags:
+  - Team
+  tags_raw:
   - Teams
   properties:
   - type: OpenAPI

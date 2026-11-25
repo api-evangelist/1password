@@ -124,10 +124,16 @@ Which operations an agent can call, which act, and which need a human in the loo
 
 - [1Password Agentic Access](https://apis.io/agentic-access/1password/1password-agentic-access/)
 
-#### JSON Schema (29)
+#### JSON Schema (66)
 
 The data models the API reads and writes.
 
+- [Account](https://apis.io/schemas/1password/1password-account/)
+- [APIRequest](https://apis.io/schemas/1password/1password-apirequest/)
+- [App](https://apis.io/schemas/1password/1password-app/)
+- [AppPatch](https://apis.io/schemas/1password/1password-app-patch/)
+- [AppPost](https://apis.io/schemas/1password/1password-app-post/)
+- [AuditEventResponse](https://apis.io/schemas/1password/1password-audit-event-response/)
 - [APIRequest](https://apis.io/schemas/1password/1password-connect-api-request/)
 - [Field](https://apis.io/schemas/1password/1password-connect-field/)
 - [File](https://apis.io/schemas/1password/1password-connect-file/)
@@ -141,19 +147,13 @@ The data models the API reads and writes.
 - [Url](https://apis.io/schemas/1password/1password-connect-url/)
 - [Vault](https://apis.io/schemas/1password/1password-connect-vault/)
 - [VaultRef](https://apis.io/schemas/1password/1password-connect-vault-ref/)
-- [1Password Event](https://apis.io/schemas/1password/1password-event/)
-- [AuditEvent](https://apis.io/schemas/1password/1password-events-audit-event/)
-- [AuditEventResponse](https://apis.io/schemas/1password/1password-events-audit-event-response/)
-- [EventClient](https://apis.io/schemas/1password/1password-events-event-client/)
-- [EventLocation](https://apis.io/schemas/1password/1password-events-event-location/)
-- [EventRequest](https://apis.io/schemas/1password/1password-events-event-request/)
-- [EventUser](https://apis.io/schemas/1password/1password-events-event-user/)
-- [ItemUsage](https://apis.io/schemas/1password/1password-events-item-usage/)
-- [ItemUsageResponse](https://apis.io/schemas/1password/1password-events-item-usage-response/)
-- [SignInAttempt](https://apis.io/schemas/1password/1password-events-sign-in-attempt/)
-- [SignInAttemptResponse](https://apis.io/schemas/1password/1password-events-sign-in-attempt-response/)
-- [TokenIntrospection](https://apis.io/schemas/1password/1password-events-token-introspection/)
-- …and 4 more published on APIs.io
+- [Contract](https://apis.io/schemas/1password/1password-contract/)
+- [ContractPage](https://apis.io/schemas/1password/1password-contract-page/)
+- [CreateAccountRequest](https://apis.io/schemas/1password/1password-create-account-request/)
+- [CustomerAppFieldPage](https://apis.io/schemas/1password/1password-customer-app-field-page/)
+- [CustomerAppUserPage](https://apis.io/schemas/1password/1password-customer-app-user-page/)
+- [Device](https://apis.io/schemas/1password/1password-device/)
+- …and 41 more published on APIs.io
 
 #### JSON Structure (29)
 
@@ -254,13 +254,35 @@ Postman and Open Collection request collections.
 - [1Password Events API](https://apis.io/collections/1password/postman-1password-events/)
 - [1Password Partnership API](https://apis.io/collections/1password/postman-1password-partnership/)
 
-#### Overlays (3)
+#### Overlays (25)
 
 OpenAPI overlays, including conversational phrasing for each operation.
 
+- [1Password Accounts Api Phrasing Overlay](https://apis.io/overlays/1password/1password-accounts-api-phrasing-overlay/)
+- [1Password Activity Api Phrasing Overlay](https://apis.io/overlays/1password/1password-activity-api-phrasing-overlay/)
+- [1Password Applications Api Phrasing Overlay](https://apis.io/overlays/1password/1password-applications-api-phrasing-overlay/)
+- [1Password Audit Events Api Phrasing Overlay](https://apis.io/overlays/1password/1password-audit-events-api-phrasing-overlay/)
+- [1Password Audit Log Api Certification Overlay](https://apis.io/overlays/1password/1password-audit-log-api-certification-overlay/)
+- [1Password Audit Log Api Phrasing Overlay](https://apis.io/overlays/1password/1password-audit-log-api-phrasing-overlay/)
+- [1Password Authentication Api Phrasing Overlay](https://apis.io/overlays/1password/1password-authentication-api-phrasing-overlay/)
 - [1Password Connect Overlay](https://apis.io/overlays/1password/1password-connect-overlay/)
+- [1Password Contracts Api Phrasing Overlay](https://apis.io/overlays/1password/1password-contracts-api-phrasing-overlay/)
+- [1Password Devices Api Phrasing Overlay](https://apis.io/overlays/1password/1password-devices-api-phrasing-overlay/)
 - [1Password Events Overlay](https://apis.io/overlays/1password/1password-events-overlay/)
+- [1Password Files Api Phrasing Overlay](https://apis.io/overlays/1password/1password-files-api-phrasing-overlay/)
+- [1Password Health Api Phrasing Overlay](https://apis.io/overlays/1password/1password-health-api-phrasing-overlay/)
+- [1Password Introspection Api Phrasing Overlay](https://apis.io/overlays/1password/1password-introspection-api-phrasing-overlay/)
+- [1Password Item Usages Api Phrasing Overlay](https://apis.io/overlays/1password/1password-item-usages-api-phrasing-overlay/)
+- [1Password Items Api Phrasing Overlay](https://apis.io/overlays/1password/1password-items-api-phrasing-overlay/)
+- [1Password Metrics Api Phrasing Overlay](https://apis.io/overlays/1password/1password-metrics-api-phrasing-overlay/)
 - [1Password Partnership Overlay](https://apis.io/overlays/1password/1password-partnership-overlay/)
+- [1Password People Api Phrasing Overlay](https://apis.io/overlays/1password/1password-people-api-phrasing-overlay/)
+- [1Password Scim Api Certification Overlay](https://apis.io/overlays/1password/1password-scim-api-certification-overlay/)
+- [1Password Scim Api Phrasing Overlay](https://apis.io/overlays/1password/1password-scim-api-phrasing-overlay/)
+- [1Password Sign In Attempts Api Phrasing Overlay](https://apis.io/overlays/1password/1password-sign-in-attempts-api-phrasing-overlay/)
+- [1Password Teams Api Phrasing Overlay](https://apis.io/overlays/1password/1password-teams-api-phrasing-overlay/)
+- [1Password Vaults Api Phrasing Overlay](https://apis.io/overlays/1password/1password-vaults-api-phrasing-overlay/)
+- [1Password Workflows Api Phrasing Overlay](https://apis.io/overlays/1password/1password-workflows-api-phrasing-overlay/)
 
 #### Governance rules (2)
 
@@ -312,18 +334,18 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 60.4** — strong · rubric 0.25.0 · scored 2026-10-23
+**Kin Score 68.8** — exemplar · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
 | Discoverability | 68.3 |
-| Contract quality | 70.5 |
+| Contract quality | 73.6 |
 | Contract governance | 31.8 |
-| Operational transparency | 36.8 |
+| Operational transparency | 35.7 |
 | Developer ergonomics | 75.0 |
-| Access clarity | 50.0 |
+| Access clarity | 63.8 |
 
-**Agent readiness 33.8** — agent-ready
+**Agent readiness 33.6** — agent-ready
 
 | Agent-readiness dimension | Result |
 |---|---|
@@ -348,6 +370,10 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Agentic Commerce | — |
 | Pagination Ratio | partial |
 | Operation Distinctiveness | distinct |
+| MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | yes |
 
 **Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
 
